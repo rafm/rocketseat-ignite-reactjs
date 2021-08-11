@@ -19,4 +19,6 @@ yarn add webpack-dev-server -D
 yarn add cross-env -D
 
 yarn add style-loader css-loader -D
+
+yarn add sass-loader sass -D
 ```
