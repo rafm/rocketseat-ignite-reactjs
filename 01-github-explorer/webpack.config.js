@@ -11,6 +11,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public')
+    },
     plugins: [
         // This plugin is used to insert the bundled js script reference dynamically on the index.html file
         new HtmlWebpackPlugin({

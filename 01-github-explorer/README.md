@@ -13,4 +13,6 @@ yarn webpack
 yarn webpack
 
 yarn add html-webpack-plugin -D
+
+yarn add webpack-dev-server -D
 ```
