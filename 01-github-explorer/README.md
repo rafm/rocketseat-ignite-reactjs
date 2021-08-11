@@ -11,4 +11,6 @@ yarn add webpack webpack-cli babel-loader -D
 yarn webpack
 
 yarn webpack
+
+yarn add html-webpack-plugin -D
 ```
