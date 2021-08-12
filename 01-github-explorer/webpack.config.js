@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -15,20 +16,30 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'public')
+        contentBase: path.resolve(__dirname, 'public'),
+        hot: true
     },
     plugins: [
+        // This plugin is used to keep the React components' state when executing webpack dev server auto reloading
+        isDevelopment && new ReactRefreshWebpackPlugin(),
         // This plugin is used to insert the bundled js script reference dynamically on the index.html file
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
         })
-    ],
+    ].filter(Boolean),
     module: {
         rules: [
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: [
+                            isDevelopment && require.resolve('react-refresh/babel')
+                        ].filter(Boolean)
+                    }
+                }
             },
             {
                 test: /\.scss$/,

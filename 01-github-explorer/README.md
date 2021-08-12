@@ -21,4 +21,6 @@ yarn add cross-env -D
 yarn add style-loader css-loader -D
 
 yarn add sass-loader sass -D
+
+yarn add @pmmmwh/react-refresh-webpack-plugin react-refresh -D
 ```
