@@ -4,9 +4,9 @@ import './styles/global.scss'
 
 export function App() {
     return (
-        <div>
+        <>
             <RepositoryList />
             <Counter />
-        </div>
+        </>
     )
 }
