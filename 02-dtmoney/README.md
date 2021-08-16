@@ -10,4 +10,6 @@ yarn add axios
 
 yarn add react-modal
 yarn add @types/react-modal -D
+
+yarn add polished // library to use JS functions to manipulate colors
 ```
