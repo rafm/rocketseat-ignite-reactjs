@@ -2,11 +2,10 @@ import { Container } from "./styles";
 import incomeSvg from '../../assets/income.svg'
 import outcomeSvg from '../../assets/outcome.svg'
 import totalSvg from '../../assets/total.svg'
-import { useContext } from "react";
-import { TransactionContext } from "../../TransactionContext";
+import { useTransactions } from "../../hooks/useTransactions";
 
 export function Summary() {
-    const { transactions } = useContext(TransactionContext)
+    const { transactions } = useTransactions()
 
     const incomeTotal = transactions
         .filter(transaction => transaction.type === 'deposit')
