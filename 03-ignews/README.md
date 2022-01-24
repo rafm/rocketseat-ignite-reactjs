@@ -9,4 +9,6 @@ yarn dev // Next will automatically detect the .tsx files in the project and add
 yarn add sass
 
 yarn add react-icons
+
+yarn add stripe
 ```
