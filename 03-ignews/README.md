@@ -11,4 +11,6 @@ yarn add sass
 yarn add react-icons
 
 yarn add stripe
+
+yarn add next-auth
 ```
