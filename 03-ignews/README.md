@@ -13,4 +13,6 @@ yarn add react-icons
 yarn add stripe
 
 yarn add next-auth
+
+yarn add faunadb
 ```
