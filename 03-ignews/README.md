@@ -15,4 +15,7 @@ yarn add stripe
 yarn add next-auth
 
 yarn add faunadb
+
+yarn add axios
+yarn add @stripe/stripe-js
 ```
