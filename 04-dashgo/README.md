@@ -11,4 +11,6 @@ yarn add react-icons
 yarn add apexcharts react-apexcharts
 
 yarn add react-hook-form
+
+yarn add yup @hookform/resolvers
 ```
